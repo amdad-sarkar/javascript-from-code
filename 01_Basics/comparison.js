@@ -9,7 +9,7 @@
 // console.log("02" > 1);
 
 
-//we have to ignore tjis type of coparison bcz we have different data type
+//we have to ignore this type of coparison bcz we have different data type
 console.log(null > 0);
 console.log(null == 0);
 console.log(null >= 0);
