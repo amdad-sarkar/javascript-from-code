@@ -13,7 +13,7 @@
 4	DONE	The operation is complete. -->
 
 <div id="card">
-    ${logIn}
+    
 </div>
 
 </body>
@@ -27,7 +27,10 @@
             const data = JSON.parse(this.responseText)
             console.log(typeof data);
             console.log(data.followers);
-            const logIn =data.login
+            console.log(data.login);
+            const log =data.login
+            const crd= document.getElementById('card').innerHTML=log
+            
         }
     }
     xhr.send();
