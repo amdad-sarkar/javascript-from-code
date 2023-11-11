@@ -15,15 +15,17 @@
     // const sayDate = function(str){
     //     console.log(str, Date.now());
     // }
-    let ref = function(){
-        if(nintervalid){
-            nintervalid = setInterval(sayDate,1000)
-        }
-    }
+
     const sayDate = function(str){
         console.log(str, Date.now());
     }
 
+    let ref = function(){
+        if(!nintervalid){
+            nintervalid = setInterval(sayDate,1000 , 'hi')
+        }
+    }
+   
     function stopped(){
         clearInterval(nintervalid)
         nintervalid = null
