@@ -11,17 +11,26 @@
     <button id="stop">Stop</button>
 </body>
 <script>
+    let nintervalid;
+    // const sayDate = function(str){
+    //     console.log(str, Date.now());
+    // }
+    let ref = function(sayDate){
+        if(nintervalid){
+            nintervalid = setInterval('hi',1000)
+        }
+    }
     const sayDate = function(str){
         console.log(str, Date.now());
     }
-    let ref = function(){
-        const intervalId = setInterval(sayDate, 1000, "hi")
+
+    function stopped(){
+        clearInterval(nintervalid)
+        nintervalid = null
     }
     
 
     document.querySelector('#start').addEventListener('click',ref )
-    document.querySelector('#stop').addEventListener('click', function(){
-        clearInterval(ref)
-    })
+    document.querySelector('#stop').addEventListener('click', stopped)
 </script>
 </html>
